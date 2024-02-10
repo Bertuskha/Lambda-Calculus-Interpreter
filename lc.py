@@ -213,7 +213,7 @@ while input_stream:
         print(show(expr)) 
 
         cont = 0
-        while cont < 10:
+        while cont < 50:
             expr, isModified = eval(expr)
             if(isModified):
                 cont = cont + 1

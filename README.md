@@ -36,7 +36,7 @@ python3 achurch.py
 
 ### Terms
 
-Looking at the grammar we can see that this interpret supports terms as inputs. The following inputs are considered valid terms:
+Looking at the grammar we can see that this interpret supports terms as inputs. The following inputs (and combinations of them) are considered valid terms:
 
 - A variable, defined by any of the alphabet letters (from a to z) in underscore.
 - An abstraction, defined by a symbol 'λ' or '\' followed by a set of one or more variables, a '.' as a separator and, finally, a term that acts as the body of the abstraction (i.e: λxyz.abc is an abstraction of the variables x, y and z over the body "abc"). 
@@ -154,3 +154,26 @@ Resultat:
 ## Telegram Bot runtime
 
 Executing `achurch.py` will activate the telegram bot s it can start receiving inputs. Then, by searching the bot by name `AChurchBertus`, one can start interacting with it.
+
+The bot has 5 different types of commands:
+
+### /start
+
+This command must be executed at the very beginning of the chat in order for the bot to function properly. This will initialize necessary values for the bot as well as reset the macros table.
+
+### /help
+
+This command will show the available commands in case they are forgotten.
+
+### /author
+
+This command shows the author of the Bot as well as year of development.
+
+### /macros
+
+This command will show the list of macros that have been defined in the current session in order of assignment.
+
+### λ-expression
+
+This is the basic way of operating with the bot. When given a λ-expression, the bot will show the expression in text and graph form (for clearer visual of the term), apply any β-reductions and α-conversions necessary and return the final expression both in text and graph form. A λ-expression can be any of the valid terms explained before in the `Valid Operations` section.
+

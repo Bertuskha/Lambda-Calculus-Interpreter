@@ -150,3 +150,7 @@ Arbre:
 Resultat:
 (λx.(λy.(x(x(x(x(xy)))))))
 ```
+
+## Telegram Bot runtime
+
+Executing `achurch.py` will activate the telegram bot s it can start receiving inputs. Then, by searching the bot by name `AChurchBertus`, one can start interacting with it.
